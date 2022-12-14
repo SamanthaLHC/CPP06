@@ -5,6 +5,8 @@
 #include <limits>
 
 
+
+
 bool is_int(std::string input_to_parse)
 {
 	int int_type;
@@ -20,6 +22,23 @@ bool is_int(std::string input_to_parse)
 		return false;
 }
 
+
+bool is_float(std::string input_to_parse)
+{
+	int int_type;
+
+	std::istringstream ss(input_to_parse);
+	if (ss >> int_type)
+	{
+		if (int_type <= std::numeric_limits<int>::max() || int_type >= std::numeric_limits<int>::min())
+			return true;
+		return false;
+	}
+	else
+		return false;
+}
+
+
 int main(int ac, char **av)
 {
 
@@ -28,7 +47,7 @@ int main(int ac, char **av)
 	else
 	{
 		bool result;
-		std::string input =	std::getline(std::cin, av[1]);
+		std::string input =	av[1];
 		result = is_int(input);
 		std::cout << result << std::endl;
 	}
