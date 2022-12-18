@@ -11,6 +11,7 @@ OBJ_PATH = ./objs/
 
 SRCS = $(addprefix $(SRCS_PATH), \
 		detect_type.cpp \
+		convert.cpp \
 		main.cpp)
 
 OBJS	= $(SRCS:$(SRCS_PATH)%.cpp=$(OBJ_PATH)%.o)
