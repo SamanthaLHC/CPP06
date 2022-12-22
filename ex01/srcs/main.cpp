@@ -24,6 +24,7 @@ int main()
 			  << BWHT << "float in data: " << data->f << std::endl
 			  << BWHT << "str in data: " << data->str << RES << std::endl;
 	uintptr_t ret = serialize(data);
+	std::cout << BYEL << "serialized data:  " << ret << std::endl;
 	Data *data_serialized = deserialize(ret);
 	std::cout << BCYN << "data's ptr:  " << data << std::endl
 			  << BCYN << "ret deserialize: " << data_serialized << RES << std::endl;
