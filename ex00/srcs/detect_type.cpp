@@ -4,6 +4,7 @@
 #include <limits>
 #include <cctype>
 
+#include "colors.h"
 #include "cast.hpp"
 
 bool is_int(std::string const &input_to_parse)
@@ -40,7 +41,7 @@ bool is_inff_or_nanf(std::string const &input, float &float_type, bool &flag_inf
 		float_type = std::numeric_limits<float>::signaling_NaN();
 		flag_inff_nanff = 1;
 		return true;
-	}
+	}	
 	return false;
 }
 

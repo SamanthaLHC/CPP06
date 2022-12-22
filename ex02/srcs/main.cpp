@@ -48,21 +48,21 @@ void identify(Base &p)
 {
 	try
 	{
-		dynamic_cast<A &>(p);
+		p = dynamic_cast<A &>(p);
 		std::cout << BWHT << "object is type A " << RES << std::endl;
 	}
 	catch (const std::exception &)
 	{
 		try
 		{
-			dynamic_cast<B &>(p);
+			p = dynamic_cast<B &>(p);
 			std::cout << BWHT << "object is type B " << RES << std::endl;
 		}
 		catch (const std::exception &)
 		{
 			try
 			{
-				dynamic_cast<C &>(p);
+				p = dynamic_cast<C &>(p);
 				std::cout << BWHT << "object is type C " << RES << std::endl;
 			}
 			catch (const std::exception &) {}

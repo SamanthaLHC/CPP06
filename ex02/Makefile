@@ -1,7 +1,7 @@
 NAME = cast
 
 CXX = c++
-CXXFLAGS = -MMD -g3 -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -MMD -g3 -Wall -Wextra -Werror -Wunused -std=c++98
 
 
 INCLUDE = -I./includes
