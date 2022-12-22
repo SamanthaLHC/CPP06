@@ -1,4 +1,4 @@
-// #include "colors.h"
+#include "colors.h"
 
 #include "cast.hpp"
 
@@ -10,6 +10,7 @@ int main(int ac, char **av)
 	else
 	{
 		std::string input = av[1];
-		detect_type(input);
+		if (detect_type(input) == false)
+			std::cout << BRED  << "conversion impossile." << RES << std::endl;
 	}
 }
